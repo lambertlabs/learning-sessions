@@ -9,7 +9,7 @@
 <br />
 <p align="center">
   <a href="https://lambertlabs.com">
-    <img src="https://github.com/lambertlabs/learning-sessions/blob/main/images/logo.png?raw=true" alt="Logo" width="400" height="160">
+    <img src="https://github.com/lambertlabs/learning-sessions/blob/main/images/logo.png?raw=true" alt="Logo" width="550" height="160">
   </a>
 
   <h3 align="center">Learning at Lambert Labs</h3>
