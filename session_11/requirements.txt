@@ -1,0 +1,2 @@
+MonkeyType==21.5.0
+mypy==0.910
