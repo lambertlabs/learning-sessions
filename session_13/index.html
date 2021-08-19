@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Counter example</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script
+    crossorigin
+    src="https://unpkg.com/react@17/umd/react.development.js"
+  ></script>
+  <script
+    crossorigin
+    src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+  ></script>
+  <script
+    type="text/babel"
+    src="./src/components/App.js"
+    data-plugins="transform-modules-umd"
+  ></script>
+  <script
+    type="text/babel"
+    src="./src/index.js"
+    data-plugins="transform-modules-umd"
+  ></script>
+</html>
