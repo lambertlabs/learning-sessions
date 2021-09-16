@@ -1,0 +1,42 @@
+asyncapi: 2.0.0
+
+info:
+  title: Are we there yet app
+  version: '1.0.0'
+  description: |
+    Get updates about artifical travels to different locations.
+
+servers:
+  main:
+    url: localhost
+    protocol: ws
+
+channels:
+  /travel-status:
+    subscribe:
+      summary: Client can receive travel info status.
+      operationId: travelInfo
+      message:
+        $ref: '#/components/messages/travelInfo'
+
+components:
+  messages:
+    travelInfo:
+      summary: Message that contains information about travel status.
+      examples:
+        - payload:
+            destination: Far far away
+            distance: Beyond the seven mountains and seven forests
+            arrival: Pretty soon
+      payload:
+        type: object
+        properties:
+          destination:
+            description: Name of travel destination.
+            type: string
+          distance:
+            description: How much distance left to the target.
+            type: string
+          arrival:
+            description: Time left to get there.
+            type: string

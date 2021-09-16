@@ -1,0 +1,15 @@
+{
+  "name": "are-we-there-yet-app",
+  "description": "Get updates about artifical travels to different locations. ",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node src/api/index.js"
+  },
+  "dependencies": {
+    "@asyncapi/parser": "^1.9.0",
+    "dummy-json": "^3.0.4",
+    "express": "4.17.1",
+    "express-ws": "4.0.0",
+    "node-yaml-config": "0.0.6"
+  }
+}
