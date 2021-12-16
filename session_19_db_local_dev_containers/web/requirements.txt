@@ -1,0 +1,3 @@
+falcon==1.4.1
+falcon-autocrud==1.0.37
+psycopg2-binary==2.9.2
