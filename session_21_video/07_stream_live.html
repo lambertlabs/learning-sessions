@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+  <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
+</head>
+<body>
+    
+  <video-js id="my_video_1" class="vjs-default-skin" controls preload="auto" width="640" height="268" style="margin-left: auto; margin-right: auto;">
+    <source src="http://localhost:8000/live/STREAM_NAME/index.m3u8" type="application/x-mpegURL">
+  </video-js>
+  
+  <script src="https://unpkg.com/video.js/dist/video.js"></script>
+  <script src="https://unpkg.com/@videojs/http-streaming/dist/videojs-http-streaming.js"></script>
+  
+  <script>
+    var player = videojs('my_video_1');
+  </script>
+  
+</body>
+</html>

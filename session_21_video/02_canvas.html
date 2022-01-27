@@ -1,0 +1,45 @@
+<div style="display: flex; justify-content: space-around;">
+<video controls width="400">
+        <source src="media/video.webm"
+            type="video/webm">
+        <source src="media/video.mp4"
+            type="video/mp4">
+        <track default
+           kind="captions"
+           srclang="en"
+           src="media/subtitles.vtt" />
+        Sorry, your browser doesn't support embedded videos.
+</video>
+
+<canvas>
+        Sorry, your browser does not support canvas.
+</canvas>
+<script type="text/javascript">
+      var video = document.querySelector('video');
+      var canvas = document.querySelector('canvas');
+      var ctx = canvas.getContext("2d");
+
+      video.onloadedmetadata = () => {
+        canvas.width = video.offsetWidth;
+        canvas.height = video.offsetHeight;
+      }
+
+      video.oncanplaythrough = function() {
+        function play() {
+
+            ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+   
+            var imageData = ctx.getImageData(0, 0, canvas.width,canvas.height);    
+            var d = imageData.data;
+                        
+            for(var i = 0; i < d.length; i += 4) {
+                var verage = (d[i] + d[i+1] + d[i+2])/3;
+                d[i] = d[i+1] = d[i+2] = verage;
+            }
+            ctx.putImageData(imageData,0,0);
+            window.requestAnimationFrame(play);
+        }
+        play();
+    }
+</script>
+</div>
