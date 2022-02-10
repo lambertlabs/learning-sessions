@@ -1,0 +1,1 @@
+sqlacodegen postgresql://postgres:Nader1739@localhost/mydb
